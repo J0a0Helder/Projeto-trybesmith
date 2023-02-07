@@ -5,7 +5,7 @@ import IUser from '../interfaces/userInterface';
 import connection from '../models/connection';
 
 export default class UserService {
-  public model: UserModel;
+  private model: UserModel;
 
   constructor() {
     this.model = new UserModel(connection);
@@ -25,7 +25,7 @@ export default class UserService {
         expiresIn: auth.expires,
       },
     );
-  
+    
     return { token };
   }
 }
