@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-export default class Loginvalidate {
+export default class LoginMiddelware {
   public loginUserFields = async (req: Request, res: Response, next: NextFunction) => {
     const { username, password } = req.body;
     if (!username) {
